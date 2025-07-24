@@ -21,3 +21,14 @@ function atualizarLista() {
         lista.appendChild(item);
     }
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Adicione pelo menos um amigo.");
+        return;
+    }
+    let indice = Math.floor(Math.random() * amigos.length);
+    let nomeSorteado = amigos[indice];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "O amigo secreto sorteado foi: " + nomeSorteado;
+}
